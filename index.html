@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Proyecto Alrededor de EE.U.U Sprint 5" />
+    <meta name="author" content="Lizbeth Aguilar Saavedra" />
+    <meta name="keywords" content="explorar, cultura, Estados Unidos" />
+    <title>Alrededor de EE.U.U</title>
+    <link rel="stylesheet" href="./vendor/normalize.css" />
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          src="./images/logo.svg"
+          alt="Logo Around EE.U.U"
+          class="header__logo"
+        />
+        <div class="header__line"></div>
+      </header>
+
+      <main class="content">
+        <section class="profile">
+          <div class="profile__photo"></div>
+          <div class="profile__info">
+            <div class="profile__content">
+              <h1 class="profile__username">Jacques Cousteau</h1>
+              <img
+                src="./images/Edit_Button.svg"
+                alt="Boton editar"
+                class="profile__edit-button"
+              />
+            </div>
+            <p class="profile__paragraph">Explorador</p>
+          </div>
+          <img
+            src="./images/Add_Button.svg"
+            alt="Boton agregar"
+            class="profile__add-button"
+          />
+        </section>
+        <div class="popup" id="popup-profile">
+          <form class="form popup__container" id="form-profile" novalidate>
+            <img
+              src="./images/Close_Icon.svg"
+              alt="Icono para cerrar"
+              class="form__close-button"
+              id="close-profile-form"
+            />
+            <h2 class="form__title">Editar perfil</h2>
+
+            <input
+              type="text"
+              id="input-name"
+              class="form__input"
+              required
+              minlength="2"
+              maxlength="40"
+              placeholder="Nombre"
+            />
+
+            <span class="input-error input-name-error"></span>
+
+            <input
+              type="text"
+              id="input-about"
+              class="form__input"
+              required
+              minlength="2"
+              maxlength="200"
+              placeholder="Acerca de mi"
+            />
+            <span class="input-error input-name-error"></span>
+
+            <button class="form__button" type="submit" id="profile-form-button">
+              Guardar
+            </button>
+          </form>
+        </div>
+
+        <section class="places">
+          <div class="place">
+            <button class="place__photo-delete"></button>
+
+            <img
+              class="place__photo"
+              src="./images/edificios-coloridos.png"
+              alt="Ciudad"
+            />
+            <div class="place__info">
+              <h2 class="place__photo-name">Ciudad</h2>
+              <button class="place__photo-heart"></button>
+            </div>
+          </div>
+          <div class="place">
+            <button class="place__photo-delete"></button>
+            <img
+              class="place__photo"
+              src="./images/gran-canon.png"
+              alt="Gran canon"
+            />
+            <div class="place__info">
+              <h2 class="place__photo-name">Gran Cañon</h2>
+              <button class="place__photo-heart"></button>
+            </div>
+          </div>
+          <div class="place">
+            <button class="place__photo-delete"></button>
+            <img
+              class="place__photo"
+              src="./images/palacio-vitral.png"
+              alt="Mezquita"
+            />
+            <div class="place__info">
+              <h2 class="place__photo-name">Mezquita</h2>
+              <button class="place__photo-heart"></button>
+            </div>
+          </div>
+          <div class="place">
+            <button class="place__photo-delete"></button>
+            <img class="place__photo" src="./images/playa.png" alt="Playa" />
+            <div class="place__info">
+              <h2 class="place__photo-name">Playa</h2>
+              <button class="place__photo-heart"></button>
+            </div>
+          </div>
+          <div class="place">
+            <button class="place__photo-delete"></button>
+            <img class="place__photo" src="./images/rio.png" alt="Rio" />
+            <div class="place__info">
+              <h2 class="place__photo-name">Rio</h2>
+              <button class="place__photo-heart"></button>
+            </div>
+          </div>
+          <div class="place">
+            <button class="place__photo-delete"></button>
+            <img class="place__photo" src="./images/torre.png" alt="Torre" />
+            <div class="place__info">
+              <h2 class="place__photo-name">Torre</h2>
+              <button class="place__photo-heart"></button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="footer__copyright">&copy;2024 Mesto Russia</p>
+        </div>
+      </footer>
+    </div>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
