@@ -1,0 +1,135 @@
+.places {
+  display: grid;
+  max-width: 882px;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.place {
+  max-width: 282px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 361px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+}
+
+.place__photo-delete {
+  background-image: url(../images/Trash.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  height: 20px;
+  max-width: 18px;
+  width: 100%;
+  border: 0;
+  align-self: flex-end;
+  position: absolute;
+  margin: auto;
+  margin-top: 18px;
+}
+
+.place__photo-delete:hover {
+  background-image: url(../images/Trash-hover.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  height: 20px;
+  max-width: 18px;
+  width: 100%;
+  border: 0;
+  align-self: flex-end;
+  position: absolute;
+  margin: auto;
+  margin-top: 18px;
+  cursor: pointer;
+}
+
+.place__photo {
+  max-width: 282px;
+  width: 100%;
+  max-height: 282px;
+  height: 100%;
+}
+
+.place__info {
+  display: flex;
+  flex-direction: row;
+
+  max-width: 248px;
+  width: 100%;
+  height: 23px;
+  margin: auto;
+}
+
+.place__photo-name {
+  max-width: 246px;
+  width: 100%;
+  margin: auto;
+  font-size: 24px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  align-self: center;
+}
+
+.place__photo-heart {
+  max-width: 21px;
+  width: 100%;
+  background-image: url(../images/heart_icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  background-color: #fff;
+}
+
+.place__photo-heart:hover {
+  max-width: 21px;
+  width: 100%;
+  background-image: url(../images/heart_icon-hover.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .places {
+    grid-template-columns: repeat(1, 1fr);
+    margin: auto;
+  }
+  .place__photo-delete:hover {
+    background-image: url(../images/Trash-hover.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    height: 20px;
+    max-width: 18px;
+    width: 100%;
+    border: 0;
+    align-self: flex-end;
+    position: absolute;
+    margin: auto;
+    margin-top: 18px;
+    cursor: pointer;
+  }
+
+  .place__photo-heart:hover {
+    max-width: 21px;
+    width: 100%;
+    background-image: url(../images/heart_icon-hover.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}

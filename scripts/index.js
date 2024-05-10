@@ -9,7 +9,6 @@ const closeButton = document.querySelector(".form__close-button");
 
 profileButton.addEventListener("click", function (evt) {
   popupProfile.classList.add("popup__show");
-  popupProfile.style.display = "block";
 });
 
 function clearInputs() {
@@ -19,7 +18,6 @@ function clearInputs() {
 
 closeButton.addEventListener("click", function (evt) {
   popupProfile.classList.remove("popup__show");
-  popupProfile.style.display = "none";
 });
 
 function handleCloseProfile() {
