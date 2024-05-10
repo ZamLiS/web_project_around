@@ -7,6 +7,7 @@ El proyecto de este Sprint consiste en un sitio web que busca recrear el funcion
 En este proyecto hubo partes emocionantes para mi como hacer la parte de la galeria y el perfil, sin embargo la parte que mas esperaba de este proyecto fue JavaScript, aprender este lenguaje fue una de las razones para entrar a TripleTen.
 
 Puedes darle un vistazo a mi proyecto aqui:
+https://github.com/ZamLiS/web_project_around
 
 ## Características del proyecto
 
