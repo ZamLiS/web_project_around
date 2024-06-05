@@ -80,9 +80,46 @@
             </button>
           </form>
         </div>
+        <div class="popup" id="popup-add-card">
+          <form class="form popup__container" id="form-addcard" novalidate>
+            <img
+              src="./images/Close_Icon.svg"
+              alt="Icono para cerrar"
+              class="form__close-button"
+              id="close-addcard-form"
+            />
+            <h2 class="form__title">Nuevo lugar</h2>
+
+            <input
+              type="text"
+              id="input-title"
+              class="form__input"
+              required
+              minlength="2"
+              maxlength="40"
+              placeholder="Titulo"
+            />
+
+            <span class="input-error input-title-error"></span>
+
+            <input
+              type="text"
+              id="input-url"
+              class="form__input"
+              required
+              minlength="2"
+              maxlength="200"
+              placeholder="Enlace a la imagen"
+            />
+            <span class="input-error input-url-error"></span>
+            <button class="form__button" type="submit" id="addcard-form-button">
+              Crear
+            </button>
+          </form>
+        </div>
 
         <section class="places">
-          <div class="place">
+          <!-- <div class="place">
             <button class="place__photo-delete"></button>
 
             <img
@@ -142,8 +179,18 @@
               <h2 class="place__photo-name">Torre</h2>
               <button class="place__photo-heart"></button>
             </div>
-          </div>
+          </div>-->
         </section>
+        <template class="template-card">
+          <div class="place">
+            <button class="place__photo-delete"></button>
+            <img class="place__photo" src="" alt="" />
+            <div class="place__info">
+              <h2 class="place__photo-name"></h2>
+              <button class="place__photo-heart"></button>
+            </div>
+          </div>
+        </template>
       </main>
       <footer class="footer">
         <div class="footer__container">

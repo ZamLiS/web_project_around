@@ -91,14 +91,12 @@
 }
 
 .place__photo-heart:hover {
-  max-width: 21px;
-  width: 100%;
-  background-image: url(../images/heart_icon-hover.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  border: 0;
-  background-color: #fff;
+  opacity: 60%;
   cursor: pointer;
+}
+
+.place__photo-heart_active {
+  background-image: url(../images/heart_active.svg);
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
