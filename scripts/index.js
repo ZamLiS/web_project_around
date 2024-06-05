@@ -101,7 +101,7 @@ closeButtonCard.addEventListener("click", function (evt) {
   popupCards.classList.remove("popup__show");
 });
 
-/*formCards.addEventListener("submit", function (evt) {
+formCards.addEventListener("submit", function (evt) {
   evt.preventDefault();
   const cardToAdd = cardGenerator();
   const cardTitle = card.querySelector(".place__photo-name");
@@ -111,4 +111,4 @@ closeButtonCard.addEventListener("click", function (evt) {
   cardTitle.textContent = inputTitle.value;
   cardImage.src = inputLink.value;
   cardArea.prepend(cardToAdd);
-});*/
+});
