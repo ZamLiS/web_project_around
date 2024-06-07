@@ -10,10 +10,12 @@ const formProfile = document.querySelector("#form-profile");
 const formCards = document.querySelector("#form-addcard");
 const closeButton = document.querySelector(".form__close-button");
 const closeButtonCard = document.querySelector("#close-addcard-form");
+const closePopupImage = document.querySelector("#close-popup-image");
 const template = document.querySelector(".template-card");
 const cardArea = document.querySelector(".places");
 const inputTitle = document.querySelector("#input-title");
 const inputLink = document.querySelector("#input-url");
+const popupImagePlace = template.querySelector("#popup-place");
 
 const initialCards = [
   {
@@ -55,6 +57,7 @@ function cardGenerator(name, link) {
   btnDelete.addEventListener("click", function () {
     card.remove();
   });
+
   cardImage.src = link;
   cardTitle.textContent = name;
   cardImage.alt = name;
@@ -101,14 +104,22 @@ closeButtonCard.addEventListener("click", function (evt) {
   popupCards.classList.remove("popup__show");
 });
 
+/*closePopupImage.addEventListener("click", function (evt) {
+  popupImagePlace.classList.remove("popup__show");
+});*/
+
 formCards.addEventListener("submit", function (evt) {
   evt.preventDefault();
-  const cardToAdd = cardGenerator();
-  const cardTitle = card.querySelector(".place__photo-name");
-  const cardImage = card.querySelector(".place__photo");
-  const inputTitle = document.querySelector("#input-title");
-  const inputLink = document.querySelector("#input-url");
-  cardTitle.textContent = inputTitle.value;
-  cardImage.src = inputLink.value;
+  const cardToAdd = cardGenerator(inputTitle.value, inputLink.value);
   cardArea.prepend(cardToAdd);
+  popupCards.classList.remove("popup__show");
+});
+
+popupImagePlace.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  const popupImage = template.querySelector(".popup-place__image");
+  const popupPlaceName = template.querySelector(".popup-place__name");
+  popupImage.src = cardImage.link;
+  popupPlaceName.textContent = cardTitle.name;
+  popupImage.alt = cardTitle.name;
 });
