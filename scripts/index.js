@@ -15,7 +15,7 @@ const template = document.querySelector(".template-card");
 const cardArea = document.querySelector(".places");
 const inputTitle = document.querySelector("#input-title");
 const inputLink = document.querySelector("#input-url");
-const popupImagePlace = template.querySelector("#popup-place");
+const popupImagePlace = document.querySelector("#popup-place");
 
 const initialCards = [
   {
@@ -62,6 +62,18 @@ function cardGenerator(name, link) {
   cardTitle.textContent = name;
   cardImage.alt = name;
   cardArea.append(card);
+
+  cardImage.addEventListener("click", function (evt) {
+    evt.preventDefault();
+
+    popupImagePlace.classList.add("popup__show");
+    const popupImage = document.querySelector(".popup-place__image");
+    const popupPlaceName = document.querySelector(".popup-place__name");
+    popupImage.src = link;
+    popupPlaceName.textContent = name;
+    popupImage.alt = name;
+  });
+
   return card;
 }
 
@@ -77,6 +89,8 @@ profileButton.addEventListener("click", function (evt) {
 function clearInputs() {
   inputName.value = "";
   inputAbout.value = "";
+  inputTitle.value = "";
+  inputLink.value = "";
 }
 
 closeButton.addEventListener("click", function (evt) {
@@ -104,22 +118,14 @@ closeButtonCard.addEventListener("click", function (evt) {
   popupCards.classList.remove("popup__show");
 });
 
-/*closePopupImage.addEventListener("click", function (evt) {
+closePopupImage.addEventListener("click", function (evt) {
   popupImagePlace.classList.remove("popup__show");
-});*/
+});
 
 formCards.addEventListener("submit", function (evt) {
   evt.preventDefault();
   const cardToAdd = cardGenerator(inputTitle.value, inputLink.value);
   cardArea.prepend(cardToAdd);
   popupCards.classList.remove("popup__show");
-});
-
-popupImagePlace.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  const popupImage = template.querySelector(".popup-place__image");
-  const popupPlaceName = template.querySelector(".popup-place__name");
-  popupImage.src = cardImage.link;
-  popupPlaceName.textContent = cardTitle.name;
-  popupImage.alt = cardTitle.name;
+  clearInputs();
 });
