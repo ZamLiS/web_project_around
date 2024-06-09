@@ -67,8 +67,8 @@ function cardGenerator(name, link) {
     evt.preventDefault();
 
     popupImagePlace.classList.add("popup__show");
-    const popupImage = document.querySelector(".popup-place__image");
-    const popupPlaceName = document.querySelector(".popup-place__name");
+    const popupImage = document.querySelector(".popup__place-image");
+    const popupPlaceName = document.querySelector(".popup__place-name");
     popupImage.src = link;
     popupPlaceName.textContent = name;
     popupImage.alt = name;
